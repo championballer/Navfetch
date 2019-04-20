@@ -5,7 +5,7 @@ import torch.nn.functional as F
 class QNetwork(nn.Module):
     """Actor (Policy) Model."""
 
-    def __init__(self, state_size, action_size,hidden_layers,seed,drop_p=0.5):
+    def __init__(self, state_size, action_size,hidden_layers,seed):
         """Initialize parameters and build model.
         Params
         ======
@@ -21,15 +21,13 @@ class QNetwork(nn.Module):
         self.hidden_layers.extend([nn.Linear(h1, h2) for h1,h2 in zip(hidden_layers[:-1], hidden_layers[1:])]) 
         
         self.output = nn.Linear(hidden_layers[-1],action_size)
-        #self.dropout = nn.Dropout(p=drop_p)
                                              
     def forward(self, state):
         """Build a network that maps state -> action values."""
         
         x = state
         for linear in self.hidden_layers:
-            x = F.relu(linear(x))
-            #x = self.dropout(x)
+            x = F.elu(linear(x))
         
         x = self.output(x)
         return x
