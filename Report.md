@@ -11,6 +11,11 @@ The environment was solved using the double DQN algorithm which involves the use
 
 On implementation side of things, Double DQN turned out to be more stable than classic DQN. The architecture for the neural networks is that of containing two hidden layers containing 128 and 64 units each. The configuration was selected after experimenting with many architectures. With 256 units in two layers, the performance got a little slow, whereas with 64 units in two layers, the learning period took longer initially. Then this architecture was tried and it yielded satisfactory results. It may possible that the performance on other configurations might have been affected by other hyper parameters. So keeping that in mind is very important. The activation function employed on each hidden layer is Exponential Linear Unit or ELU which was observed to give minutely better and more stable performance than ReLU. The output layer of the networks was normal output function to obtain action values corresponding to each possible action in the action space. 
 
+
+<p align="center">
+<img src ="https://github.com/championballer/P1_Navigation/raw/master/Images/SS1.png">
+</p>
+
 Note : The construction function of the Qnetwork takes in an array indicating the sizes of the hidden layers and that are used to create the network architecture. In this case they were, [128,64]. 
 
 For the agent, local and target networks are initialised using the mentioned hidden layers sizes, while Adam optimiser is loaded for the optimisation process. Replay buffer has been picked from the code used in the DQN exercise. The networks are initialised with the same weights, as it was indicated on student hub to give better results. This is done using a hard update function written after the soft update function. 
@@ -25,7 +30,3 @@ After every 100 episodes, the average score of the last 100 epsiodes, was printe
 
 ## Further Improvements
 
-
-<p align="center">
-<img src ="https://github.com/championballer/P1_Navigation/raw/master/Images/SS1.png">
-</p>
