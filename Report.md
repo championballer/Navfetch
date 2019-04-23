@@ -48,3 +48,10 @@ After every 100 episodes, the average score of the last 100 epsiodes, was printe
 
 ## Further Improvements
 
+1. As mentioned by Udacity, priority q targets as well as Dueling DQN would be implemented to see how the performance of the network improves.
+
+2. Different other architectural structures for the neural nets  will be tried to check if the efficiency of the network can be increase further.
+
+3. Batch normalisation will be tried with ReLU to see if it outperforms ELU performance wise.
+
+4. Update frequency will be played with to further fine tune performance of the agent. 
