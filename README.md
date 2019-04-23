@@ -34,7 +34,7 @@ The task is episodic, and in order to solve the environment, our agent must get 
 
 Note : The environment for MacOS is already downloaded and unzipped in this repository by the name of Banana.app
 
-## Dependencies
+### Dependencies
 
 To set up your python environment to run the code in this repository, follow the instructions below.
 
