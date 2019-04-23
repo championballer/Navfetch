@@ -1,4 +1,4 @@
-# Project 1: Navigation
+# Navfetch
 
 [image2]: https://user-images.githubusercontent.com/10624937/42386929-76f671f0-8106-11e8-9376-f17da2ae852e.png "Kernel"
 
