@@ -96,7 +96,7 @@ class Agent():
         
         self.optimizer.zero_grad()
         loss.backward()
-        #torch.nn.utils.clip_grad_norm_(self.qnetwork_local.parameters(), 1)
+        torch.nn.utils.clip_grad_norm_(self.qnetwork_local.parameters(), 1)
         self.optimizer.step()
 
         # ------------------- update target network ------------------- #
