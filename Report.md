@@ -12,5 +12,5 @@ The environment was solved using the double DQN algorithm which involves the use
 On implementation side of things, Double DQN turned out to be more stable than classic DQN. The architecture for the neural networks is that of containing two hidden layers containing 128 and 64 units each. The activation function employed on each hidden layer is Exponential Linear Unit or ELU which was observed to give minutely better and more stable performance than ReLU. The output layer of the networks was normal output function to obtain action values corresponding to each possible action in the action space. 
 
 <p align="center">
-<img src ="https://github.com/championballer/RL/raw/master/P1_Navigation/Images/SS1.png">
+<img src ="https://github.com/championballer/P1_Navigation/raw/master/Images/SS1.png">
 </p>
